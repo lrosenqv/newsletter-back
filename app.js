@@ -7,6 +7,8 @@ import cors  from 'cors';
 import logger  from 'morgan';
 
 import usersRouter  from './routes/users.js';
+import adminRouter from './routes/admin.js'
+import addUserRouter from './routes/addUser.js'
 
 const app = express();
 
@@ -18,6 +20,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use('/users', usersRouter);
+app.use('/admin', adminRouter);
+app.use('/addUser', addUserRouter);
 
 app.use(function (req, res, next) {
   res.status(404).json({message: "We couldn't find what you were looking for 😞"})

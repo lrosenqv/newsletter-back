@@ -1,0 +1,26 @@
+GET http://localhost:3001/users
+
+###
+
+POST http://localhost:3001/addUser
+Content-Type: application/json
+
+{
+  "firstname": "Louise31",
+  "username": "Admin",
+  "password": "Admin",
+  "userId": "443",
+  "isLoggedIn": false,
+  "subscription": true,
+  "admin": true
+}
+
+###
+
+POST http://localhost:3001/users
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "Admin"
+}
