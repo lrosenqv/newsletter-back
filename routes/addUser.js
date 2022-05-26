@@ -13,6 +13,13 @@ router.post('/', (req, res) => {
   let collectedUsers = getUsers("users.json");
 
   let cryptoPass = CryptoJS.AES.encrypt(req.body.password, "Salt key").toString();
+  let sub = req.body.subscription;
+
+  if(sub === "true"){
+    sub = true
+  } else {
+    sub = false
+  }
 
   let newUser = {
     firstname: req.body.firstname,
@@ -21,7 +28,7 @@ router.post('/', (req, res) => {
     userId: nanoid(),
     isLoggedin: false,
     admin: false,
-    subscription: req.body.subscription
+    subscription: sub
   }
 
   collectedUsers = [...collectedUsers, newUser]

@@ -18,7 +18,7 @@ export function getUsers(url) {
   return content
 }
 
-router.post('/login', (req, res) => {
+router.post('/', (req, res) => {
   const users = getUsers('users.json')
 
   let foundUser = users.find((user) => {
