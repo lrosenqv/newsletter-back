@@ -6,13 +6,11 @@ POST http://localhost:3001/addUser
 Content-Type: application/json
 
 {
-  "firstname": "Louise31",
-  "username": "Admin",
-  "password": "Admin",
-  "userId": "443",
-  "isLoggedIn": false,
-  "subscription": true,
-  "admin": true
+  "firstname": "Ayla",
+  "username": "Ayla",
+  "password": "Attack",
+  "email": "ayla@pawesome.com",
+  "subscription": true
 }
 
 ###
@@ -21,8 +19,8 @@ POST http://localhost:3001/login
 Content-Type: application/json
 
 {
-  "username": "Admin",
-  "password": "Admin"
+  "username": "Ayla",
+  "password": "Attack"
 }
 
 ###

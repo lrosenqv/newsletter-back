@@ -1,8 +1,6 @@
 import express from "express";
-import { nanoid } from "nanoid";
-import { existsSync, readFileSync, writeFileSync } from "fs";
 import CryptoJS from "crypto-js";
-import { getUsers } from "./users.js"
+
 const router = express.Router();
 
 router.get("/", function (req, res, next) {
@@ -10,30 +8,26 @@ router.get("/", function (req, res, next) {
 });
 
 router.post('/', (req, res) => {
-  let collectedUsers = getUsers("users.json");
+  let users = req.app.locals.db.collection('users');
 
   let cryptoPass = CryptoJS.AES.encrypt(req.body.password, "Salt key").toString();
-  let sub = req.body.subscription;
+  let subOption = req.body.subscription;
 
-  if(sub === "true"){
-    sub = true
+  if(subOption === "true"){
+    subOption = true
   } else {
-    sub = false
+    subOption = false
   }
 
   let newUser = {
     firstname: req.body.firstname,
     username: req.body.username,
     password: cryptoPass,
-    userId: nanoid(),
-    isLoggedin: false,
-    admin: false,
-    subscription: sub
+    email: req.body.email,
+    subscription: subOption
   }
 
-  collectedUsers = [...collectedUsers, newUser]
-
-  writeFileSync("users.json", JSON.stringify(collectedUsers))
+  users.insertOne(newUser)
   res.send("New User Added")
 })
 

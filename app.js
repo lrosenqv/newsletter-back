@@ -10,6 +10,16 @@ import usersRouter  from './routes/users.js';
 import adminRouter from './routes/admin.js';
 import addUserRouter from './routes/addUser.js';
 import loginRouter from './routes/login.js';
+import * as mongodb from 'mongodb';
+
+const client = mongodb.MongoClient;
+client.connect("mongodb+srv://admin:Aylavi3w123@dw-newsletter.2vgd0ob.mongodb.net/?retryWrites=true&w=majority", {
+  useUnifiedTopology: true
+})
+.then(cli => {
+  const db = cli.db('users');
+  app.locals.db = db;
+})
 
 const app = express();
 
