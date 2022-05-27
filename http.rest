@@ -7,7 +7,7 @@ Content-Type: application/json
 
 {
   "firstname": "Ayla",
-  "username": "Ayla",
+  "username": "Ayla2",
   "password": "Attack",
   "email": "ayla@pawesome.com",
   "subscription": true
@@ -29,3 +29,10 @@ POST http://localhost:3001/admin
 Content-Type: application/json
 
 {"password": "Admin"}
+
+###
+
+GET http://localhost:3001/users/Ayla
+Content-Type: application/json
+
+{"_id": "628fea39040ebe63204524fd"}

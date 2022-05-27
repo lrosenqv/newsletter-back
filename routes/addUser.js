@@ -27,8 +27,20 @@ router.post('/', (req, res) => {
     subscription: subOption
   }
 
-  users.insertOne(newUser)
-  res.send("New User Added")
+  let usernameQuery = {
+    username: req.body.username
+  }
+
+  users.findOne(usernameQuery, function(err, user){
+    if(err) throw new Error(err)
+    if(!user){
+      users.insertOne(newUser)
+      res.send("New User Added")
+    } else {
+      res.send("username already exist")
+    }
+  })
+
 })
 
 export default router;
