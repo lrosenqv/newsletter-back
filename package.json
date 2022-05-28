@@ -4,7 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "nodemon ./bin/www.js"
+    "start": "nodemon ./bin/www.js & npm run scss",
+    "scss": "sass --watch public/css/style.scss public/css/style.css"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -14,6 +15,7 @@
     "express": "~4.16.1",
     "mongodb": "^4.6.0",
     "morgan": "~1.9.1",
-    "nodemon": "^2.0.16"
+    "nodemon": "^2.0.16",
+    "sass": "^1.52.1"
   }
 }

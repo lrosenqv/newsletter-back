@@ -32,7 +32,7 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:3001/users/Ayla
+GET http://localhost:3001/users/62901d1d09fd48d4d9c99af4
 Content-Type: application/json
 
-{"_id": "628fea39040ebe63204524fd"}
+{"_id": "62901d1d09fd48d4d9c99af4"}

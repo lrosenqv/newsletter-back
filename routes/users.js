@@ -1,7 +1,9 @@
 import express from "express";
+import { ObjectId } from 'mongodb';
+
 const router = express.Router();
 
-/* GET users listing. */
+//Get all users
 router.get('/', function (req, res, next) {
   req.app.locals.db.collection('users').find().toArray()
   .then(results => {
@@ -9,16 +11,12 @@ router.get('/', function (req, res, next) {
   })
 });
 
-router.get('/:username', (req, res) => {
-  let userQuery = { _id: req.body._id }
 
-  req.app.locals.db.collection('users').findOne(userQuery, function(err, user) {
-    if(err) throw new Error(err);
-    if(!user){
-      res.send("hoppsan")
-    } else {
-      res.send("Hej" + user.username)
-    }
+//Get one user based on objectId
+router.get('/:_id', (req, res, next) => {
+  req.app.locals.db.collection('users').findOne(ObjectId(req.params._id))
+  .then(result => {
+    res.json(result)
   })
 })
 
