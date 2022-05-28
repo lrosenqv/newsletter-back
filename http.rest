@@ -42,4 +42,4 @@ Content-Type: application/json
 PUT http://localhost:3001/users/update/628fea39040ebe63204524fd
 Content-Type: application/json
 
-{"_id": "62901d1d09fd48d4d9c99af4", "subscription": false}
+{"_id": "62901d1d09fd48d4d9c99af4", "subscription": true}

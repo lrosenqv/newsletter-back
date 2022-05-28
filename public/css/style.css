@@ -18,9 +18,33 @@ body {
   font-family: Helvetica, Arial, sans-serif;
 }
 
+ul {
+  padding: 0;
+}
+ul li {
+  display: grid;
+  grid-template-columns: 9rem 17rem 6rem;
+  justify-content: left;
+  align-items: stretch;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+ul li:first-child {
+  background-color: rgb(73, 73, 74);
+  color: white;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+}
+ul li p {
+  font-weight: bold;
+  margin: 0;
+}
+
 .custom-checkbox {
-  width: 7rem;
+  width: 5rem;
   height: 2rem;
+  align-self: center;
 }
 .custom-checkbox input.status {
   display: none;

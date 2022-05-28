@@ -7,14 +7,18 @@ let htmlHead ='<link rel="stylesheet" href="/css/style.css"><script src="js/scri
 
 /* GET users listing. */
 router.get("/", function (req, res, next) {
-  let printUsers = `<h1>Users</h1><ul>`
+  let printUsers = `<h1>Users</h1><ul>
+  <li>
+    <p>Username</p><p>_id</p><p>Subscription</p>
+  </li>`
 
   req.app.locals.db.collection('users').find().toArray()
   .then(results => {
     for (let i = 0; i < results.length; i++) {
       printUsers += `
-      <li id=${results[i]._id}> ${results[i].firstname}
-        Subscription: ${results[i].subscription}
+      <li id=${results[i]._id}>
+        <p>${results[i].firstname}</p>
+        <p>${results[i]._id}</p>
         <div class="custom-checkbox">
         <input class="status" type="checkbox" name="status" ${results[i].subscription ? "checked" : ""} />
         <label for="status">

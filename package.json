@@ -8,6 +8,7 @@
     "scss": "sass --watch public/css/style.scss public/css/style.css"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "cookie-parser": "~1.4.4",
     "cors": "^2.8.5",
     "crypto-js": "^4.1.1",

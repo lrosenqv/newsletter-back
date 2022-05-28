@@ -11,6 +11,19 @@ router.get('/', function (req, res, next) {
   })
 });
 
+router.get('/subscribers', (req, res, next) => {
+  let query = { subscription: true }
+  let options = {
+    sort: { email: 1 },
+    projection: { _id: 0, email: 1 }
+  }
+
+  req.app.locals.db.collection('users').find(query, options).toArray()
+  .then(result => {
+    res.json(result)
+  })
+})
+
 
 //Get one user based on objectId
 router.get('/:_id', (req, res, next) => {
