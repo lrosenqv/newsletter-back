@@ -16,7 +16,7 @@ import * as mongodb from 'mongodb';
 dotenv.config()
 
 const client = mongodb.MongoClient;
-  client.connect(process.env.DB_SRC, {
+  client.connect('mongodb+srv://admin:Aylavi3w123@dw-newsletter.2vgd0ob.mongodb.net/?retryWrites=true&w=majority', {
     useUnifiedTopology: true
   })
   .then(cli => {
