@@ -1,5 +1,6 @@
 import express from 'express';
 import path from 'path';
+import dotenv from "dotenv";
 
 import __dirname  from './dirname.js';
 import cookieParser  from 'cookie-parser';
@@ -12,14 +13,16 @@ import addUserRouter from './routes/addUser.js';
 import loginRouter from './routes/login.js';
 import * as mongodb from 'mongodb';
 
+dotenv.config()
+
 const client = mongodb.MongoClient;
-client.connect("mongodb+srv://admin:Aylavi3w123@dw-newsletter.2vgd0ob.mongodb.net/?retryWrites=true&w=majority", {
-  useUnifiedTopology: true
-})
-.then(cli => {
-  const db = cli.db('users');
-  app.locals.db = db;
-})
+  client.connect(process.env.DB_SRC, {
+    useUnifiedTopology: true
+  })
+  .then(cli => {
+    const db = cli.db('users');
+    app.locals.db = db;
+  })
 
 const app = express();
 
