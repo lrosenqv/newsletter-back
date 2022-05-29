@@ -1,19 +1,21 @@
-Client: React
-Server: NodeJS and Express(with Express generator)
-Database: MongoDB atlas
+<p>Client: React</p>
+<p>Server: NodeJS and Express(with Express generator)</p>
+<p>Database: MongoDB atlas</p>
 
 
 To run app:
-npm install
-npm start
+<li>npm install</li>
+<li>npm start</li>
+
 
 Installed dependencies:
-axios
-cors
-crypto-js
-dotenv
-mongodb
-sass
-nodemon
-
+<ul>
+  <li>axios</li>
+  <li>cors</li>
+  <li>crypto-js</li>
+  <li>dotenv</li>
+  <li>mongodb</li>
+  <li>sass</li>
+  <li>nodemon</li>
+</ul>
 Admin password: Admin
