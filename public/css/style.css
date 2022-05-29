@@ -1,140 +1,48 @@
-ul {
-  list-style-type: none;
-}
+ul { list-style-type: none; }
 
-* {
-  box-sizing: border-box;
-}
+* { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-html, body {
-  height: 100%;
-}
+html, body { height: 100%; }
 
-body {
-  display: flex;
-  flex-direction: column;
-  margin-top: 5rem;
-  align-items: center;
-  font-family: Helvetica, Arial, sans-serif;
-}
+body { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; margin-top: 5rem; -webkit-box-align: center; -ms-flex-align: center; align-items: center; font-family: Helvetica, Arial, sans-serif; }
 
-#emailList {
-  border: 1px solid rgb(23, 23, 23);
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  text-align: left;
-  width: 60vw;
-  min-height: 10rem;
-}
+#emailList { border: 1px solid #171717; margin-top: 1rem; padding: 0.5rem 1rem; text-align: left; width: 60vw; min-height: 10rem; }
 
-button {
-  background-color: rgb(76, 76, 105);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 0.6rem 1rem;
-  cursor: pointer;
-}
-button:hover {
-  background-color: rgb(58, 58, 71);
-}
+button { background-color: #4c4c69; color: white; border: none; border-radius: 5px; padding: 0.6rem 1rem; cursor: pointer; }
 
-input {
-  padding: 0.5rem;
-}
+button:hover { background-color: #3a3a47; }
 
-a {
-  background-color: rgb(76, 76, 105);
-  color: white;
-  border-radius: 5px;
-  padding: 0.6rem 1rem;
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-a:hover {
-  background-color: rgb(58, 58, 71);
-}
+input { padding: 0.5rem; }
 
-ul {
-  padding: 0;
-}
-ul li {
-  display: grid;
-  grid-template-columns: 9rem 17rem 6rem;
-  justify-content: left;
-  align-items: stretch;
-  gap: 1.5rem;
-  padding: 1rem;
-}
-ul li:first-child {
-  background-color: rgb(94, 94, 94);
-  color: white;
-  gap: 1rem;
-  margin-bottom: 0.5rem;
-  padding: 0.5rem;
-}
-ul li p {
-  font-weight: bold;
-  margin: 0;
-}
+a { background-color: #4c4c69; color: white; border-radius: 5px; padding: 0.6rem 1rem; text-decoration: none; font-size: 0.9rem; }
 
-.custom-checkbox {
-  width: 5rem;
-  height: 2rem;
-  align-self: center;
-}
-.custom-checkbox input.status {
-  display: none;
-}
-.custom-checkbox input.status + label {
-  height: 100%;
-  width: 100%;
-}
-.custom-checkbox input.status + label > .status-switch {
-  cursor: pointer;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  background-color: grey;
-  color: white;
-  transition: all 0.5s ease;
-  padding: 3px;
-  border-radius: 5px;
-}
-.custom-checkbox input.status + label > .status-switch:before, .custom-checkbox input.status + label > .status-switch:after {
-  border-radius: 5px;
-  height: calc(100% - 5px);
-  width: calc(65% - 3px);
-  display: flex;
-  align-items: center;
-  position: absolute;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
-.custom-checkbox input.status + label > .status-switch:before {
-  background-color: white;
-  color: black;
-  box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.2);
-  right: 3px;
-  z-index: 10;
-  content: attr(data-unchecked);
-}
-.custom-checkbox input.status + label > .status-switch:after {
-  left: 0;
-  content: "";
-}
-.custom-checkbox input.status:checked + label > .status-switch {
-  background-color: #40c253;
-  cursor: pointer;
-}
-.custom-checkbox input.status:checked + label > .status-switch:after {
-  right: 0;
-  content: "";
-}
-.custom-checkbox input.status:checked + label > .status-switch:before {
-  color: #40c253;
-  right: 35%;
-  content: attr(data-checked);
-}
+a:hover { background-color: #3a3a47; }
 
+ul { padding: 0; }
+
+ul li { display: -ms-grid; display: grid; -ms-grid-columns: 9rem 17rem 6rem; grid-template-columns: 9rem 17rem 6rem; -webkit-box-pack: left; -ms-flex-pack: left; justify-content: left; -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; gap: 1.5rem; padding: 1rem; }
+
+ul li:first-child { background-color: #5e5e5e; color: white; gap: 1rem; margin-bottom: 0.5rem; padding: 0.5rem; }
+
+ul li p { font-weight: bold; margin: 0; }
+
+.custom-checkbox { width: 5rem; height: 2rem; -ms-flex-item-align: center; -ms-grid-row-align: center; align-self: center; }
+
+.custom-checkbox input.status { display: none; }
+
+.custom-checkbox input.status + label { height: 100%; width: 100%; }
+
+.custom-checkbox input.status + label > .status-switch { cursor: pointer; width: 100%; height: 100%; position: relative; background-color: grey; color: white; -webkit-transition: all 0.5s ease; transition: all 0.5s ease; padding: 3px; border-radius: 5px; }
+
+.custom-checkbox input.status + label > .status-switch:before, .custom-checkbox input.status + label > .status-switch:after { border-radius: 5px; height: calc(100% - 5px); width: calc(65% - 3px); display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; position: absolute; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-transition: all 0.3s ease; transition: all 0.3s ease; }
+
+.custom-checkbox input.status + label > .status-switch:before { background-color: white; color: black; -webkit-box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.2); box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.2); right: 3px; z-index: 10; content: attr(data-unchecked); }
+
+.custom-checkbox input.status + label > .status-switch:after { left: 0; content: ""; }
+
+.custom-checkbox input.status:checked + label > .status-switch { background-color: #40c253; cursor: pointer; }
+
+.custom-checkbox input.status:checked + label > .status-switch:after { right: 0; content: ""; }
+
+.custom-checkbox input.status:checked + label > .status-switch:before { color: #40c253; right: 35%; content: attr(data-checked); }
 /*# sourceMappingURL=style.css.map */

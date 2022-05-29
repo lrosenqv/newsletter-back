@@ -15,7 +15,7 @@ router.post('/', (req, res) => {
       let decryptedPass = CryptoJS.AES.decrypt(user.password, "Salt key").toString(CryptoJS.enc.Utf8)
 
       if(req.body.password === decryptedPass){
-        res.send("Success!")
+        res.json(user)
       } else {
         res.send("Not Found");
       }

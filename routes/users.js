@@ -28,8 +28,11 @@ router.get('/subscribers', (req, res, next) => {
 //Get one user based on objectId
 router.get('/:_id', (req, res, next) => {
   let query = ObjectId(req.params._id)
+  let options = {
+    projection: { _id: 0, password: 0 }
+  }
 
-  req.app.locals.db.collection('users').findOne(query)
+  req.app.locals.db.collection('users').findOne(query, options)
   .then(result => {
     console.log(req);
     res.json(result)

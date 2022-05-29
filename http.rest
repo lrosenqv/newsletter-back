@@ -6,10 +6,9 @@ POST http://localhost:3001/addUser
 Content-Type: application/json
 
 {
-  "firstname": "Test",
-  "username": "Test",
+  "username": "Test2",
   "password": "Test",
-  "email": "test@testtest.com",
+  "email": "test2@testtest.com",
   "subscription": true
 }
 
