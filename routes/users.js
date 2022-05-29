@@ -31,6 +31,7 @@ router.get('/:_id', (req, res, next) => {
 
   req.app.locals.db.collection('users').findOne(query)
   .then(result => {
+    console.log(req);
     res.json(result)
   })
 })
@@ -50,5 +51,6 @@ router.put('/update/:_id', (req, res, next) => {
       res.json(result)
     })
 })
+
 
 export default router;

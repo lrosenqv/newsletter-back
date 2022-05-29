@@ -6,10 +6,10 @@ POST http://localhost:3001/addUser
 Content-Type: application/json
 
 {
-  "firstname": "Ayla",
-  "username": "Ayla2",
-  "password": "Attack",
-  "email": "ayla@pawesome.com",
+  "firstname": "Test",
+  "username": "Test",
+  "password": "Test",
+  "email": "test@testtest.com",
   "subscription": true
 }
 
@@ -19,8 +19,8 @@ POST http://localhost:3001/login
 Content-Type: application/json
 
 {
-  "username": "Ayla",
-  "password": "Attack"
+  "username": "Test",
+  "password": "Test"
 }
 
 ###
@@ -32,10 +32,10 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:3001/users/628fea39040ebe63204524fd
+GET http://localhost:3001/users/62918c4e08662c65350a76c1
 Content-Type: application/json
 
-{"_id": "62901d1d09fd48d4d9c99af4"}
+{"_id": "62918c4e08662c65350a76c1"}
 
 ###
 

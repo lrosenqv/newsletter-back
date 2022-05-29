@@ -1,38 +1,8 @@
 let checkboxes = document.querySelectorAll(".custom-checkbox")
-let tabs = document.querySelectorAll(".tabLink")
-let contents = document.querySelectorAll(".tabContent")
-let userList = document.querySelector("#userList")
-
-/*
-function getUsers(){
-  fetch('http://localhost:3001/users')
-  .then(res => res.json())
-  .then(result => {
-    console.log(result);
-
-
-
-    for (let i = 0; i < results.length; i++) {
-        printUsers += `
-        <li id=${results[i]._id}>
-          <b>${results[i].username}</b>
-          <i>${results[i]._id}</i>
-          <div class="custom-checkbox">
-          <input class="status" type="checkbox" name="status" ${results[i].subscription ? "checked" : ""} />
-          <label for="status">
-            <div class="status-switch" data-unchecked="Off" data-checked="On"></div>
-          </label>
-          </div>
-        </li>
-        `
-      }
-      printUsers += `</ul>`
-
-  })
-}*/
 
 checkboxes.forEach(c => {
   c.addEventListener('click', () => {
+    console.log("klickad");
     let checkbox = c.firstElementChild
     let userId = c.parentElement.id
 
@@ -62,17 +32,3 @@ checkboxes.forEach(c => {
       })
   })
 })
-
-function openTab(e, tabName){
-  if(e){
-    tabs.forEach(tab => {
-      tab.classList.remove('active');
-    })
-    e.target.classList.add('active')
-
-    contents.forEach(content => {
-      content.classList.remove('active');
-    })
-    tabName.classList.add('active')
-  }
-}

@@ -7,9 +7,48 @@ html, body {   height: 100%; }
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  margin-top: 5rem;
   align-items: center;
   font-family: Helvetica, Arial, sans-serif;
+}
+
+#emailList {
+  border: 1px solid rgb(23, 23, 23);
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  text-align: left;
+  width: 60vw;
+  min-height: 10rem;
+}
+
+button {
+  background-color: rgb(76, 76, 105);
+  color:white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+
+  &:hover{
+    background-color: rgb(58, 58, 71);
+  }
+}
+
+input{
+  padding:0.5rem;
+}
+
+a{
+  background-color: rgb(76, 76, 105);
+  color:white;
+  border-radius: 5px;
+  padding: 0.6rem 1rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+
+  &:hover{
+    background-color: rgb(58, 58, 71);
+  }
 }
 
 
@@ -25,7 +64,7 @@ ul{
     padding: 1rem;
 
     &:first-child{
-      background-color: rgb(73, 73, 74);
+      background-color: rgb(94, 94, 94);
       color: white;
       gap:1rem;
       margin-bottom: 0.5rem;
@@ -66,7 +105,7 @@ ul{
         &:after {
           border-radius: 5px;
           height: calc(100% - 5px);
-          width: calc(50% - 2px);
+          width: calc(65% - 3px);
           display: flex;
           align-items: center;
           position: absolute;
@@ -85,7 +124,7 @@ ul{
 
         &:after {
           left: 0;
-          content: attr(data-checked);
+          content: "";
         }
       }
     }
@@ -93,15 +132,16 @@ ul{
     // Checked state
     &:checked + label > .status-switch {
       background-color: #40c253;
+      cursor:pointer;
 
       &:after {
         right: 0;
-        content: attr(data-unchecked);
+        content: "";
       }
 
       &:before {
         color: #40c253;
-        right: 50%;
+        right: 35%;
         content: attr(data-checked);
       }
     }
