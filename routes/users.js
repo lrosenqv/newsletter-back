@@ -34,7 +34,6 @@ router.get('/:_id', (req, res, next) => {
 
   req.app.locals.db.collection('users').findOne(query, options)
   .then(result => {
-    console.log(req);
     res.json(result)
   })
 })
