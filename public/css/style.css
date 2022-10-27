@@ -33,6 +33,7 @@ body {
   text-align: left;
   width: 60vw;
   min-height: 10rem;
+  overflow-wrap: break-word;
 }
 
 button {
@@ -50,19 +51,6 @@ button:hover {
 
 input {
   padding: 0.5rem;
-}
-
-a {
-  background-color: #4c4c69;
-  color: white;
-  border-radius: 5px;
-  padding: 0.6rem 1rem;
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-
-a:hover {
-  background-color: #3a3a47;
 }
 
 ul {
