@@ -38,7 +38,7 @@ router.get("/ok", function (req, res, next) {
   if(isLoggedIn){
     let printUsers = `
     <h1>Users</h1>
-    <form method="GET" action="http://localhost:3001/admin/ok/subscribers">
+    <form method="GET" action="https://dw-newsletter.herokuapp.com/admin/ok/subscribers">
       <button type="submit">Get subscribed emails</button>
     </form>
     <ul>
@@ -47,7 +47,7 @@ router.get("/ok", function (req, res, next) {
       </li>
     `
 
-    axios.get('http://localhost:3001/users')
+    axios.get('https://dw-newsletter.herokuapp.com/users')
     .then(results => {
       results.data.forEach((item) => {
         printUsers += `
