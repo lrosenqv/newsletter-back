@@ -19,7 +19,7 @@ checkboxes.forEach(c => {
       update.subscription = true;
     }
 
-    fetch('http://localhost:3001/users/update/' + userId, {
+    fetch('https://dw-newsletter.herokuapp.com/users/update/' + userId, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json"
