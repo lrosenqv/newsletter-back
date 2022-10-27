@@ -1,6 +1,6 @@
-<p>Client: React</p> 
-See project description on this repo: https://github.com/lrosenqv/newsletter-front
-Live on gh-pages: https://lrosenqv.github.io/newsletter-front/
+<p>Client: Created with React</p> 
+<p>See project description on this repo: https://github.com/lrosenqv/newsletter-front</p>
+<p>Live on gh-pages: https://lrosenqv.github.io/newsletter-front/</p>
 
 #
 
