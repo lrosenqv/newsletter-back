@@ -19,6 +19,10 @@ body {
   text-align: left;
   width: 60vw;
   min-height: 10rem;
+
+  p{
+    width: fit-content;
+  }
 }
 
 button {
@@ -37,20 +41,6 @@ button {
 input{
   padding:0.5rem;
 }
-
-a{
-  background-color: rgb(76, 76, 105);
-  color:white;
-  border-radius: 5px;
-  padding: 0.6rem 1rem;
-  text-decoration: none;
-  font-size: 0.9rem;
-
-  &:hover{
-    background-color: rgb(58, 58, 71);
-  }
-}
-
 
 ul{
   padding: 0;
