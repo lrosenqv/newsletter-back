@@ -1,7 +1,12 @@
-<p>Client: React</p>
+<p>Client: React</p> 
+See project description on this repo: https://github.com/lrosenqv/newsletter-front
+Live on gh-pages: https://lrosenqv.github.io/newsletter-front/
+
+#
+
 <p>Server: NodeJS and Express(with Express generator)</p>
 <p>Database: MongoDB atlas</p>
-
+<p>Deployed with Heroku. Try admin-site https://dw-newsletter.herokuapp.com/admin</p>
 
 To run app:
 <li>npm install</li>
