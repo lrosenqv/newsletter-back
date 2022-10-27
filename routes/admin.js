@@ -15,6 +15,7 @@ router.get("/", function(req, res){
       <input type="password" name="password" placeholder="Password"/>
       <button type="submit">Login</button>
     </form>
+    <a href="https://lrosenqv.github.io/newsletter-front/">Client</a>
   `)
 })
 
